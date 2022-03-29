@@ -7,18 +7,17 @@ function computerPlay () {
 console.log(computerPlay())//prints in the console
 
 //Coding for player selection 
-function playerSelection (){
+function playerPrompt(){
     let playerOne = window.prompt ("Choose between Rock, Paper, Scissors.");//Make sure no other option can be put in 
-    return playerOne;
+    return playerOne;//returns the player input
 }
-console.log(playerSelection())
 
 //Coding for a single round of Rock Paper Scissors. 
 //Case where Player 1 Loses, Computer wins.
-function singleround (playerSelection, computerSelection){
-   
-    let message = 'You Lose! Paper beats Rock';
+function singleround (player, computer){
+    if (player == 'Rock' && computer == 'paper'){
+        let message = 'You Lose! Paper beats Rock!';
+        alert(message)
+    }
 }
-let message = 'You Lose! Paper beats Rock';
-console.log(message)
-
+console.log (singleround (playerPrompt(), computerPlay()))
