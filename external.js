@@ -67,7 +67,7 @@ function singleround (player, computer){
 // console.log (singleround (playerPrompt(), computerPlay()))
 
 //Loop for a 5 round game 
-function game(){
+/*function game(){
 let WinScore = 0;
 let TieScore = 0;
 let LoseScore = 0;
@@ -87,4 +87,4 @@ let LoseScore = 0;
     alert (`HERE ARE THE RESULTS: Win: ${WinScore} , Tie: ${TieScore}, Lose: ${LoseScore}`)
 }
 
-game ()
+game ()*/
