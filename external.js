@@ -4,7 +4,7 @@ function computerPlay () {
     let randomnumber = Math.floor(Math.random() * options.length); // randomly picks a number value '0,1,2'
     return options[randomnumber]; //converts then returns number value into actual string value
 }
-console.log(computerPlay())//prints in the console
+// console.log(computerPlay())//prints in the console
 
 //Coding for player selection 
 function playerPrompt(){
@@ -64,11 +64,6 @@ function singleround (player, computer){
     }
 }
 
-//Adding a click event to 3 button elements
-
-
-
-console.log (singleround (playerPrompt(), computerPlay()))
 
 //Loop for a 5 round game 
 /*function game(){
