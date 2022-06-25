@@ -64,7 +64,11 @@ function singleround (player, computer){
     }
 }
 
-// console.log (singleround (playerPrompt(), computerPlay()))
+//Adding a click event to 3 button elements
+
+
+
+console.log (singleround (playerPrompt(), computerPlay()))
 
 //Loop for a 5 round game 
 /*function game(){
