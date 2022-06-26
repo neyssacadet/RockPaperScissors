@@ -4,7 +4,7 @@ function computerPlay () {
     let randomnumber = Math.floor(Math.random() * options.length); // randomly picks a number value '0,1,2'
     return options[randomnumber]; //converts then returns number value into actual string value
 }
-// console.log(computerPlay())//prints in the console
+//console.log(computerPlay())//prints in the console
 
 //Coding for player selection 
 function playerPrompt(){
@@ -64,6 +64,13 @@ function singleround (player, computer){
     }
 }
 
+//Adding an eventlistener to the 3 buttons
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        singleround(button.id, computerPlay());
+    });
+});
 
 //Loop for a 5 round game 
 /*function game(){
