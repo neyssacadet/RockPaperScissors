@@ -63,23 +63,23 @@ function singleround (player, computer){
         return "Tie"
     }
 }
-console.log(singleround (playerPrompt(), computerPlay()))
+//console.log(singleround (playerPrompt(), computerPlay()))
 
 //Adding an eventlistener to the 3 buttons
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        singleround(button.id,computerPlay());
+        game(button.id);
     });
 })
 
 //Loop for a 5 round game 
-/*function game(){
+function game(button){
 let WinScore = 0;
 let TieScore = 0;
 let LoseScore = 0;
     for (let i = 0; i < 5; i++) {
-        result = singleround (playerPrompt, computerPlay())
+        result = singleround (button, computerPlay())
         console.log(result)
         if (result == "Win"){
             WinScore++; 
@@ -93,5 +93,3 @@ let LoseScore = 0;
     }
     alert (`HERE ARE THE RESULTS: Win: ${WinScore} , Tie: ${TieScore}, Lose: ${LoseScore}`)
 }
-
-game ()*/
