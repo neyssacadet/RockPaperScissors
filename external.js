@@ -2,13 +2,13 @@
 function computerPlay () {
     let options = ['rock','paper', 'scissors']; //this defines 'options'
     let randomnumber = Math.floor(Math.random() * options.length); // randomly picks a number value '0,1,2'
+    console.log(options[randomnumber])
     return options[randomnumber]; //converts then returns number value into actual string value
 }
-//console.log(computerPlay())//prints in the console
 
 //Coding for player selection 
 function playerPrompt(){
-    let playerOne = window.prompt ("Choose between Rock, Paper, Scissors.");//Make sure no other option can be put in 
+    let playerOne = ['Rock', 'Paper', 'Scissors'];//Make sure no other option can be put in but also not case
     return playerOne;//returns the player input
 }
 
@@ -63,14 +63,15 @@ function singleround (player, computer){
         return "Tie"
     }
 }
+console.log(singleround (playerPrompt(), computerPlay()))
 
 //Adding an eventlistener to the 3 buttons
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        singleround(button.id, computerPlay());
+        singleround(button.id,computerPlay());
     });
-});
+})
 
 //Loop for a 5 round game 
 /*function game(){
@@ -78,7 +79,7 @@ let WinScore = 0;
 let TieScore = 0;
 let LoseScore = 0;
     for (let i = 0; i < 5; i++) {
-        result = singleround (playerPrompt(), computerPlay())
+        result = singleround (playerPrompt, computerPlay())
         console.log(result)
         if (result == "Win"){
             WinScore++; 
