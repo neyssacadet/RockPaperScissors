@@ -2,6 +2,7 @@ let WinScore = 0;
 let TieScore = 0;
 let LoseScore = 0;
 
+
 //Coding for computer to play randomly.
 function computerPlay () {
     let options = ['rock','paper', 'scissors']; //this defines 'options'
@@ -18,6 +19,8 @@ buttons.forEach((button) => {
     });
 })
 
+
+
 //Coding for a single round of Rock Paper Scissors. 
 function singleround (player, computer){
 //When Player LOSES 
@@ -26,7 +29,8 @@ function singleround (player, computer){
         alert(message)
         console.log("Lose")
         LoseScore++;
-        console.log(LoseScore)
+        const gameResults = document.querySelector('#results');
+        gameResults.innerHTML = `Here are the results: Player:${WinScore} , Computer:${LoseScore}` ;
         if (LoseScore ==5){
             console.log("YOU LOST!")
             resetGame()
@@ -46,7 +50,8 @@ function singleround (player, computer){
         alert(winMessage)
         console.log("Win")
         WinScore++; 
-        console.log(WinScore)
+        const gameResults = document.querySelector('#results');
+        gameResults.innerHTML = `Here are the results: Player:${WinScore} , Computer:${LoseScore}` ;
         if (WinScore == 5){
             console.log("YOU WON!")
             resetGame()
@@ -54,6 +59,10 @@ function singleround (player, computer){
     }
 } 
 
+
+
+
+//Resetting Scores to 0 
 function resetGame(){
     WinScore = 0;
     TieScore = 0;
