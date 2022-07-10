@@ -1,0 +1,16 @@
+body {
+    background-color: hotpink;
+}
+
+h1{
+    text-align: center;
+    color: white;
+    font-family: 'Koulen';
+}
+
+#container {
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    background-color: rgb(17, 139, 17);
+}
