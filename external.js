@@ -6,14 +6,9 @@ let LoseScore = 0;
 function computerPlay() {
     let options = ['rock','paper', 'scissors']; //this defines 'options'
     let randomnumber = Math.floor(Math.random() * options.length); // randomly picks a number value '0,1,2'
-    console.log(options[randomnumber])
     return options[randomnumber]; //converts then returns number value into actual string value
 }
 
-function showResults() {
-    const gameResults = document.querySelector('#results');
-    gameResults.innerHTML = `Here are the results: Player:${WinScore} , Computer:${LoseScore}` ;
-}
 //Coding for player selection 
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
@@ -21,16 +16,14 @@ buttons.forEach((button) => {
        singleround(button.id, computerPlay());
     });
 })
-
 //Coding for a single round of Rock Paper Scissors. 
 function singleround(player, computer){
 //When Player LOSES 
     if (player == 'Rock' && computer == 'paper' || player == 'Paper' && computer == 'scissors' || player == 'Scissors' && computer == 'rock' ){
         let message = 'Yikes';
         alert(message)
-        console.log("Lose")
         LoseScore++;
-        showResults();
+        showResults(player, computer);
         if (LoseScore ==5){
             console.log("YOU LOST!")
             resetGame()
@@ -40,24 +33,31 @@ function singleround(player, computer){
     else if (player == 'Rock' && computer == 'rock' || player == 'Paper' && computer == 'paper' || player == 'Scissors' && computer == 'scissors' ){
         let tieMessage = 'It is a tie!';
         alert(tieMessage)
-        console.log("Tie")
         TieScore++;
-       showResults();
+       showResults(player,computer);
     }
 //When Player WINS 
     else if (player == 'Rock' && computer == 'scissors' || player == 'Paper' && computer == 'rock' || player == 'Scissors' && computer == 'paper'){
         let winMessage = 'Extra Point For You!';
         alert(winMessage)
-        console.log("Win")
         WinScore++; 
-        showResults();
+        showResults(player,computer);
         if (WinScore == 5){
             console.log("YOU WON!")
             resetGame()
         }
     }
 } 
+//DOM method as a function to display results
+function showResults(player1, computer1) {
+    const gameResults = document.querySelector('#results');
+    const computerPick = document.querySelector('#computer');
+    const playerPick = document.querySelector('#player');
 
+    gameResults.innerHTML = `Here are the results: Player:${WinScore} , Computer:${LoseScore}` ;
+    computerPick.innerHTML = `Computer played ${computer1}`;
+    playerPick.innerHTML = `Player played ${player1} `;
+}
 //Resetting Scores to 0 
 function resetGame(){
     WinScore = 0;
