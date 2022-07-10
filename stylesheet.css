@@ -6,11 +6,24 @@ h1{
     text-align: center;
     color: white;
     font-family: 'Koulen';
+    margin-top: 50px;
 }
 
 #container {
     text-align: center;
     margin: auto;
     padding: 10px;
-    background-color: rgb(17, 139, 17);
+}
+
+button{
+    font-family: 'Koulen';
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    margin: 30px;
+    border-radius: 20px;
+}
+
+span{
+    font-size: 100px;
 }
