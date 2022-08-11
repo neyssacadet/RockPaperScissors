@@ -54,9 +54,9 @@ function showResults(player1, computer1) {
     const computerPick = document.querySelector('#computer');
     const playerPick = document.querySelector('#player');
 
-    gameResults.innerHTML = `Here are the results: Player:${WinScore} , Computer:${LoseScore}` ;
-    computerPick.innerHTML = `Computer played ${computer1}`;
-    playerPick.innerHTML = `Player played ${player1} `;
+    gameResults.innerHTML = `Kindness Punks: ${WinScore} | Tribes:${LoseScore}` ;
+    computerPick.innerHTML = `Tribes played ${computer1}.`;
+    playerPick.innerHTML = `You played ${player1}. `;
 }
 //Resetting Scores to 0 
 function resetGame(){

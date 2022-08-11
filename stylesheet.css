@@ -27,3 +27,18 @@ button{
 span{
     font-size: 100px;
 }
+
+#computer{
+    color: white;
+    text-align: center;
+}
+#player{
+    color: white;
+    text-align: center;
+}
+#results{
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+}
